@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiva Aqua Solutions | Premium Hatchery Seeds & Seafood Exports</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0a4d68;
+            --secondary: #088395;
+            --accent: #05bfdb;
+            --light: #e8f9fd;
+            --dark: #023047;
+            --success: #4CAF50;
+            --warning: #FF9800;
+            --text: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: #f8f9fa;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--white);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(rgba(10, 77, 104, 0.85), rgba(8, 131, 149, 0.85)), url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #04a9c7;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(5, 191, 219, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            display: inline-block;
+            position: relative;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background-color: var(--accent);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .about {
+            background-color: var(--white);
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-img {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        /* Services */
+        .services {
+            background-color: var(--light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .service-content p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .service-features li {
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-features i {
+            color: var(--success);
+        }
+
+        /* Products */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-content {
+            padding: 20px;
+        }
+
+        .product-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .product-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .tag-hatchery {
+            background-color: rgba(5, 191, 219, 0.1);
+            color: var(--accent);
+        }
+
+        .tag-export {
+            background-color: rgba(76, 175, 80, 0.1);
+            color: var(--success);
+        }
+
+        /* Network */
+        .network {
+            background-color: var(--light);
+        }
+
+        .network-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .network-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Contact */
+        .contact-container {
+            display: flex;
+            gap: 50px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .contact-details {
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            background-color: rgba(5, 191, 219, 0.1);
+            color: var(--accent);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .contact-form {
+            flex: 1;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 70px 0 30px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: var(--white);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #cccccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaaaaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-container, .contact-container {
+                flex-direction: column;
+            }
+            
+            .hero h2 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                flex-direction: column;
+                padding: 20px;
+                text-align: center;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h2 {
+                font-size: 2.3rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            section {
+                padding: 70px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-fish"></i>
+                <h1>Shiva <span>Aqua Solutions</span></h1>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#network">Network</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h2>Premium Aquaculture Seeds & Seafood Exports</h2>
+            <p>Connecting Coastal Andhra Pradesh's finest hatcheries with aquaculture farmers and global seafood markets</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn btn-primary">Get Expert Consultation</a>
+                <a href="#products" class="btn btn-secondary">Explore Our Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Shiva</h2>
+            </div>
+            
+            <div class="about-container">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Shiva - Aquaculture Expert">
+                </div>
+                <div class="about-content">
+                    <h3>Meet Shiva: Your Trusted Aqua Partner</h3>
+                    <p>With over 15 years of experience in the aquaculture industry, Shiva has established himself as a leading expert in hatchery management and seafood supply chain from the coastal region of Kakinada, Andhra Pradesh.</p>
+                    <p>His deep understanding of both seed production and seafood export markets makes him a unique bridge between hatcheries, aquaculture farmers, and global buyers.</p>
+                    <p>Shiva manages a network of premium hatcheries producing high-quality seeds while also facilitating direct exports of fresh seafood from local farmers to restaurants and companies worldwide.</p>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Based in Kakinada, Coastal Andhra Pradesh</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://i0.wp.com/www.aqua-manager.com/wp-content/uploads/2024/11/hatchery-management_2.jpg?w=800&ssl=1" alt="Hatchery Management">
+                    </div>
+                    <div class="service-content">
+                        <h3>Hatchery Management</h3>
+                        <p>Professional management and quality control for shrimp, fish, and crab hatcheries to ensure premium seed production.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> SPF (Specific Pathogen Free) certification</li>
+                            <li><i class="fas fa-check"></i> Advanced breeding techniques</li>
+                            <li><i class="fas fa-check"></i> Water quality management</li>
+                            <li><i class="fas fa-check"></i> Disease prevention protocols</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://aquaexchange.com/wp-content/uploads/elementor/thumbs/processor-pjuuhb236wm03e3vvqvlr2x0lvcg95lo4iiyidvgv4.jpg" alt="Seed Supply Network">
+                    </div>
+                    <div class="service-content">
+                        <h3>Seed Supply Network</h3>
+                        <p>Reliable supply of high-quality aquaculture seeds to farmers across Andhra Pradesh and neighboring states.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Tiger Prawn seeds (PL-10 to PL-12)</li>
+                            <li><i class="fas fa-check"></i> Crab seedlings</li>
+                            <li><i class="fas fa-check"></i> Fish fingerlings (Rohu, Catla, Mrigal)</li>
+                            <li><i class="fas fa-check"></i> Seasonal availability planning</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://www.eseafoodexports.com/images/banner/sea-food-exporter-kerala-banner.jpg" alt="Seafood Export">
+                    </div>
+                    <div class="service-content">
+                        <h3>Seafood Export & Import</h3>
+                        <p>Direct sourcing from aquaculture farmers to international buyers, restaurants, and seafood companies.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Fresh & frozen seafood exports</li>
+                            <li><i class="fas fa-check"></i> Quality certification & packaging</li>
+                            <li><i class="fas fa-check"></i> Logistics & cold chain management</li>
+                            <li><i class="fas fa-check"></i> Market linkage for farmers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Products</h2>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://5.imimg.com/data5/ANDROID/Default/2024/4/414401520/UI/XY/IO/50833179/product-jpeg-1000x1000.jpg" alt="Tiger Prawn Seeds">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-tags">
+                            <span class="tag tag-hatchery">Hatchery Product</span>
+                        </div>
+                        <h3>Tiger Prawn Seeds</h3>
+                        <p>High-quality PL-10 to PL-12 seeds with 95%+ survival rate. Available throughout the year.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://5.imimg.com/data5/ANDROID/Default/2024/11/465955724/KY/SM/VH/1679689/product-jpeg-500x500.jpeg" alt="Fresh Shrimp">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-tags">
+                            <span class="tag tag-export">Export Product</span>
+                        </div>
+                        <h3>Fresh Tiger Shrimp</h3>
+                        <p>Premium quality shrimp for export to restaurants and seafood companies worldwide.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2023/6/320267795/QT/LT/YE/10273990/mud-crab-seed-1000x1000.png" alt="Crab Seeds">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-tags">
+                            <span class="tag tag-hatchery">Hatchery Product</span>
+                        </div>
+                        <h3>Crab Seedlings</h3>
+                        <p>Healthy crab seedlings for aquaculture farming. Ideal for brackish water ponds.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="data:image/jpeg;base64,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" alt="Fresh Fish">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-tags">
+                            <span class="tag tag-export">Export Product</span>
+                        </div>
+                        <h3>Fresh Seer Fish</h3>
+                        <p>Premium quality seer fish sourced directly from coastal Andhra Pradesh fishermen.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2022/10/WG/CG/CK/13824843/0-1-1000x1000.jpg" alt="Fish Fingerlings">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-tags">
+                            <span class="tag tag-hatchery">Hatchery Product</span>
+                        </div>
+                        <h3>Fish Fingerlings</h3>
+                        <p>Rohu, Catla, and Mrigal fingerlings for freshwater aquaculture farming.</p>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://4.imimg.com/data4/DY/FX/GLADMIN-24454577/10-1000x1000.jpg" alt="Lobster">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-tags">
+                            <span class="tag tag-export">Export Product</span>
+                        </div>
+                        <h3>Live Lobster</h3>
+                        <p>Premium live lobsters for high-end restaurants and international markets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Network Section -->
+    <section class="network" id="network">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Network</h2>
+            </div>
+            
+            <div class="network-content">
+                <p>Shiva has built a robust network connecting hatcheries, aquaculture farmers, and international buyers across the seafood supply chain.</p>
+                
+                <div class="network-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Hatcheries Managed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Farmers Connected</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Export Countries</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Tonnes Exported</div>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 40px;">From Kakinada's coastal region, Shiva's operations span across Andhra Pradesh, Tamil Nadu, Odisha, and West Bengal, with export connections to USA, Japan, China, UAE, and European markets.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Whether you're a farmer looking for quality seeds, a hatchery seeking professional management, or a buyer interested in premium seafood exports, Shiva can help connect you with the right resources.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Coastal Region, Kakinada<br>Andhra Pradesh, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>shiva@aquasolutions.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Monday - Saturday: 8AM - 8PM<br>Sunday: 10AM - 4PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interest">I'm interested in</label>
+                            <select id="interest" class="form-control">
+                                <option value="">Select an option</option>
+                                <option value="seeds">Aquaculture Seeds</option>
+                                <option value="hatchery">Hatchery Management</option>
+                                <option value="export">Seafood Export</option>
+                                <option value="import">Seafood Import</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Tell us about your requirements" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Shiva Aqua Solutions</h3>
+                    <p>Bridging the gap between hatcheries, aquaculture farmers, and global seafood markets from the heart of Coastal Andhra Pradesh.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Shiva</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#network">Our Network</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Hatchery Management</a></li>
+                        <li><a href="#">Seed Supply</a></li>
+                        <li><a href="#">Aquaculture Consulting</a></li>
+                        <li><a href="#">Seafood Export</a></li>
+                        <li><a href="#">Quality Certification</a></li>
+                        <li><a href="#">Farm-to-Table Supply</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Certifications</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">SPF Certified Hatcheries</a></li>
+                        <li><a href="#">ISO Quality Standards</a></li>
+                        <li><a href="#">Export Quality Certification</a></li>
+                        <li><a href="#">Food Safety Compliance</a></li>
+                        <li><a href="#">Sustainable Aquaculture</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Shiva Aqua Solutions. All rights reserved. | Based in Kakinada, Andhra Pradesh</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const interest = document.getElementById('interest').value;
+            
+            // Simple validation
+            if(name && email) {
+                // In a real application, you would send this data to a server
+                alert(`Thank you ${name}! Shiva will contact you shortly regarding ${interest || 'your inquiry'}.`);
+                contactForm.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+        
+        // Sticky header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if(window.scrollY > 100) {
+                header.style.backgroundColor = 'var(--primary)';
+            } else {
+                header.style.backgroundColor = '';
+            }
+        });
+    </script>
+</body>
+</html>
