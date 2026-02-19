@@ -622,6 +622,11 @@ footer {
         flex-direction: column;
     }
     
+    .about-img {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
     .hero h2 {
         font-size: 2.8rem;
     }
