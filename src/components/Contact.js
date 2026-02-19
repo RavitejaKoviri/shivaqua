@@ -1,4 +1,24 @@
+import React, { useState } from 'react';
+
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const whatsappMessage = `Hello Shiva,%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0ASubject: ${formData.subject}%0AMessage: ${formData.message}`;
+    window.open(`https://wa.me/919393528999?text=${whatsappMessage}`, '_blank');
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
   return (
     <section className="contact" id="contact">
       <div className="container">
@@ -56,34 +76,33 @@ export default function Contact() {
           
           <div className="contact-form">
             <h3>Send a Message</h3>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Full Name</label>
-                <input type="text" id="name" className="form-control" placeholder="Enter your name" required />
+                <input type="text" id="name" className="form-control" placeholder="Enter your name" value={formData.name} onChange={handleChange} required />
               </div>
               
               <div className="form-group">
                 <label htmlFor="email">Email Address</label>
-                <input type="email" id="email" className="form-control" placeholder="Enter your email" required />
+                <input type="email" id="email" className="form-control" placeholder="Enter your email" value={formData.email} onChange={handleChange} required />
               </div>
               
               <div className="form-group">
                 <label htmlFor="phone">Phone Number</label>
-                <input type="tel" id="phone" className="form-control" placeholder="Enter your phone number" />
+                <input type="tel" id="phone" className="form-control" placeholder="Enter your phone number" value={formData.phone} onChange={handleChange} />
               </div>
               
               <div className="form-group">
                 <label htmlFor="subject">Subject</label>
-                <input type="text" id="subject" className="form-control" placeholder="What is this about?" required />
+                <input type="text" id="subject" className="form-control" placeholder="What is this about?" value={formData.subject} onChange={handleChange} required />
               </div>
               
               <div className="form-group">
                 <label htmlFor="message">Message</label>
-                <textarea id="message" className="form-control" placeholder="Enter your message" required></textarea>
+                <textarea id="message" className="form-control" placeholder="Enter your message" value={formData.message} onChange={handleChange} required></textarea>
               </div>
               
               <button type="submit" className="btn btn-primary">Send Message</button>
-              <a href="https://wa.me/919393528999?text=Hello%20Shiva,%20I%20would%20like%20to%20know%20more%20about%20your%20services" target="_blank" rel="noreferrer" className="btn btn-secondary" style={{marginLeft: '10px'}}>Message on WhatsApp</a>
             </form>
           </div>
         </div>
