@@ -26,10 +26,10 @@ export default function Footer() {
         <div className="footer-column">
           <h3>Follow Us</h3>
           <div className="social-links">
-            <a href="#" title="Facebook"><i className="fab fa-facebook"></i></a>
-            <a href="#" title="Twitter"><i className="fab fa-twitter"></i></a>
-            <a href="#" title="Instagram"><i className="fab fa-instagram"></i></a>
-            <a href="https://wa.me/919393528999" title="WhatsApp"><i className="fab fa-whatsapp"></i></a>
+            <a href="https://facebook.com" title="Facebook" target="_blank" rel="noreferrer"><i className="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" title="Twitter" target="_blank" rel="noreferrer"><i className="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" title="Instagram" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919393528999" title="WhatsApp" target="_blank" rel="noreferrer"><i className="fab fa-whatsapp"></i></a>
           </div>
         </div>
       </div>
