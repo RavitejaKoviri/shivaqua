@@ -745,8 +745,8 @@ footer {
     }
     
     .header-container {
-        padding: 8px 0;
-        min-height: 55px;
+        padding: 5px 0;
+        min-height: 50px;
     }
     
     .logo {
@@ -784,6 +784,15 @@ footer {
         display: flex;
     }
     
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .about-img {
+        max-width: 300px;
+        height: 250px;
+    }
+    
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -795,8 +804,8 @@ footer {
     }
     
     .header-container {
-        padding: 10px 0;
-        min-height: 60px;
+        padding: 8px 0;
+        min-height: 55px;
     }
     
     .logo {
@@ -826,6 +835,16 @@ footer {
     
     nav ul.active {
         display: flex;
+    }
+    
+    .hero {
+        padding: 65px 0;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
     }
     
     .about-img {
