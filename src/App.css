@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 :root {
     --primary: #0a4d68;
     --secondary: #088395;
@@ -32,9 +43,9 @@ h1, h2, h3, h4 {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 header {
@@ -45,24 +56,34 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 0 40px;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 15px 0;
+    min-height: 70px;
+    max-width: 100%;
+    margin: 0;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
 }
 
 .logo h1 {
     font-size: 1.8rem;
     color: var(--white);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    white-space: nowrap;
 }
 
 .logo span {
@@ -72,7 +93,9 @@ header {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
@@ -82,6 +105,7 @@ nav a {
     font-size: 1.1rem;
     transition: color 0.3s;
     position: relative;
+    padding: 5px 0;
 }
 
 nav a:hover {
@@ -110,6 +134,8 @@ nav a:hover::after {
     border: none;
     color: var(--white);
     cursor: pointer;
+    padding: 5px;
+    margin: 0;
 }
 
 .hero {
@@ -219,14 +245,18 @@ section {
 
 .about-img {
     flex: 1;
+    max-width: 450px;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    height: 450px;
 }
 
 .about-img img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
     display: block;
     transition: transform 0.5s;
 }
@@ -283,7 +313,7 @@ section {
 }
 
 .service-img {
-    height: 200px;
+    height: 280px;
     overflow: hidden;
 }
 
@@ -348,7 +378,7 @@ section {
 }
 
 .product-img {
-    height: 200px;
+    height: 280px;
     overflow: hidden;
 }
 
@@ -632,30 +662,47 @@ footer {
 }
 
 @media (max-width: 1100px) {
+    header {
+        padding: 0 20px;
+        position: relative;
+    }
+    
+    .header-container {
+        padding: 10px 0;
+        min-height: 60px;
+        position: relative;
+    }
+    
     .logo {
-        padding: 5px 10px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    nav {
+        position: static;
     }
     
     .mobile-menu-btn {
         display: block;
-        padding: 5px 10px;
-    }
-    
-    nav {
-        display: none;
+        padding: 5px;
+        margin: 0;
+        margin-left: auto;
     }
     
     nav ul {
         display: none;
         position: absolute;
         top: 100%;
-        left: 0;
-        width: 100%;
+        left: -20px;
+        right: -20px;
+        width: calc(100% + 40px);
         background-color: var(--primary);
         flex-direction: column;
-        padding: 20px;
+        padding: 15px;
+        margin: 0;
         text-align: center;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
     }
     
     nav ul.active {
@@ -664,12 +711,22 @@ footer {
 }
 
 @media (max-width: 992px) {
+    header {
+        padding: 0 20px;
+    }
+    
+    .header-container {
+        padding: 10px 0;
+        min-height: 60px;
+    }
+    
     .about-container, .contact-container {
         flex-direction: column;
     }
     
     .about-img {
-        max-width: 400px;
+        max-width: 500px;
+        height: 350px;
         margin: 0 auto;
     }
     
@@ -683,20 +740,19 @@ footer {
 }
 
 @media (max-height: 480px) and (orientation: landscape) {
+    header {
+        padding: 0 20px;
+    }
+    
     .header-container {
-        padding: 10px 20px;
-        justify-content: space-between;
-        width: 100%;
+        padding: 8px 0;
+        min-height: 55px;
     }
-    
-    nav {
-        display: none;
-    }
-    
-
     
     .logo {
         gap: 5px;
+        padding: 0;
+        margin: 0;
     }
     
     .logo i {
@@ -705,6 +761,9 @@ footer {
     
     .mobile-menu-btn {
         display: block;
+        padding: 5px;
+        margin: 0;
+        margin-left: auto;
     }
     
     nav ul {
@@ -716,6 +775,7 @@ footer {
         background-color: var(--primary);
         flex-direction: column;
         padding: 15px;
+        margin: 0;
         text-align: center;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
@@ -730,13 +790,25 @@ footer {
 }
 
 @media (max-width: 768px) and (orientation: portrait) {
+    header {
+        padding: 0 20px;
+    }
+    
+    .header-container {
+        padding: 10px 0;
+        min-height: 60px;
+    }
+    
     .logo {
-        padding: 5px 10px;
+        padding: 0;
+        margin: 0;
     }
     
     .mobile-menu-btn {
         display: block;
-        padding: 5px 10px;
+        padding: 5px;
+        margin: 0;
+        margin-left: auto;
     }
     
     nav ul {
@@ -756,19 +828,14 @@ footer {
         display: flex;
     }
     
+    .about-img {
+        height: 300px;
+    }
+    
     .products-grid {
         grid-template-columns: 1fr;
-        max-width: 400px;
+        max-width: 500px;
         margin: 0 auto;
-    }
-    
-    .product-img {
-        height: auto;
-    }
-    
-    .product-img img {
-        object-fit: contain;
-        height: auto;
     }
     
     .hero h2 {
