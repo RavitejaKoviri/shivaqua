@@ -13,7 +13,7 @@ export default function Services() {
       features: ['Tiger Prawn seeds (PL-10 to PL-12)', 'Crab seedlings', 'Fish fingerlings (Rohu, Catla, Mrigal)', 'Seasonal availability planning']
     },
     {
-      img: '/assets/seafoodExport.jpeg',
+      img: '/assets/seaFoodExport.jpeg',
       title: 'Seafood Export & Import',
       desc: 'Direct sourcing from aquaculture farmers to international buyers, restaurants, and seafood companies.',
       features: ['Fresh & frozen seafood exports', 'Quality certification & packaging', 'Logistics & cold chain management', 'Market linkage for farmers']
